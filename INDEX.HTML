@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Esther Gyan-Barimah | Portfolio</title>
+  <meta name="description" content="Portfolio of Esther Gyan-Barimah: frontend projects, skills, and contact." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip to Content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Navbar -->
+  <header class="header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="#">Esther<span>GB</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="btn btn-primary">Contact</a></li>
+        <li><button id="theme-toggle" class="btn btn-ghost" aria-pressed="false">Dark Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-content">
+        <h1>Hi, I am Esther.</h1>
+        <p class="subtitle">Frontend Developer crafting clean, responsive interfaces.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Lets Collaborate</a>
+        </div>
+      </div>
+      <figure class="hero-image">
+        <img src="C:\Users\hp\OneDrive\Pictures\Screenshots\hero.jpg" alt="Portrait of Esther Gyan-Barimah" loading="lazy" />
+      </figure>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>
+        I am a detail-oriented frontend developer based in Amasaman, Ghana. I blend semantic HTML,
+        modern CSS, and accessible JavaScript to build delightful user experiences.
+      </p>
+      <ul class="about-highlights">
+        <li><strong>Focus:</strong> Clean UI, responsive design, accessibility</li>
+        <li><strong>Tools:</strong> HTML5, CSS Grid/Flexbox, Vanilla JS</li>
+        <li><strong>Values:</strong> Clarity, empathy, and thoughtful interactions</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div class="skills-grid">
+        <article class="skill">
+          <h3>HTML5</h3>
+          <div class="progress" aria-label="HTML proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+            <span style="width:90%"></span>
+          </div>
+        </article>
+        <article class="skill">
+          <h3>CSS (Flexbox/Grid)</h3>
+          <div class="progress" aria-label="CSS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+            <span style="width:85%"></span>
+          </div>
+        </article>
+        <article class="skill">
+          <h3>JavaScript</h3>
+          <div class="progress" aria-label="JS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+            <span style="width:80%"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="projects-header">
+        <h2 id="projects-title">Projects</h2>
+        <div class="project-controls">
+          <input type="search" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+          <select id="project-filter" aria-label="Filter projects">
+            <option value="all">All</option>
+            <option value="frontend">Frontend</option>
+            <option value="ui">UI</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-tags="frontend ui">
+          <img src="C:\Users\hp\OneDrive\Pictures\Screenshots\IMG-20251120-WA0025.jpg" alt="Screenshot of Project 1" loading="lazy" />
+          <div class="project-content">
+            <h3>Responsive Landing Page</h3>
+            <p>Modern landing page using CSS Grid and scroll animations.</p>
+            <a href="#" class="btn btn-link">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="frontend">
+          <img src="C:\Users\hp\OneDrive\Pictures\Screenshots\ba52e16f7ff54b2bb2537a81cbc22078.jpg" alt="Screenshot of Project 2" loading="lazy" />
+          <div class="project-content">
+            <h3>Interactive Form</h3>
+            <p>Accessible form with validation and helpful error states.</p>
+            <a href="#" class="btn btn-link">Live Demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Esther Gyan-Barimah. Built with love and clean code.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
